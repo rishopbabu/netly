@@ -1,15 +1,6 @@
-//
-//  NetworkError.swift
-//  netly
-//
-//  Created by Rishop Babu on 03/03/26.
-//
-
 import Foundation
 
-	// MARK: - Network Error
-
-enum NetworkError: Error, LocalizedError {
+public enum NetworkError: Error, LocalizedError {
 	case noInternet
 	case invalidURL
 	case invalidResponse
@@ -18,7 +9,7 @@ enum NetworkError: Error, LocalizedError {
 	case httpError(code: Int, message: String)
 	case serverError(code: Int, message: String)
 	
-	var errorDescription: String? {
+	public var errorDescription: String? {
 		switch self {
 			case .noInternet:
 				return NetworkConstants.noInternetConnectionMessage

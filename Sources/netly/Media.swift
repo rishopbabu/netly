@@ -1,17 +1,15 @@
-//
-//  Media.swift
-//  netly
-//
-//  Created by Rishop Babu on 03/03/26.
-//
-
 import Foundation
 
-	// MARK: - Media Struct
-
-struct Media {
-	let key: String
-	let filename: String
-	let data: Data
-	let mimeType: String
+public struct Media {
+	public let key: String
+	public let filename: String
+	public let data: Data
+	public let mimeType: String
+    
+    public init(key: String, filename: String, data: Data, mimeType: String) {
+        self.key = key
+        self.filename = filename
+        self.data = data
+        self.mimeType = mimeType
+    }
 }
