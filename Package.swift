@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "netly",
+    name: "Netly",
 	platforms: [
 		.macOS(.v10_15),
 		.tvOS(.v12),
@@ -15,19 +15,19 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "netly",
-            targets: ["netly"]
+            name: "Netly",
+            targets: ["Netly"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "netly"
+            name: "Netly"
         ),
         .testTarget(
-            name: "netlyTests",
-            dependencies: ["netly"]
+            name: "NetlyTests",
+            dependencies: ["Netly"]
         ),
     ]
 )

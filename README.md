@@ -17,7 +17,7 @@ Add Netly to your `Package.swift` dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/rishopbabu/netly.git", from: "1.0.0")
+    .package(url: "https://github.com/rishopbabu/Netly.git", from: "1.0.0")
 ]
 ```
 
@@ -28,12 +28,11 @@ dependencies: [
 Create a struct or enum that conforms to the `Endpoint` protocol.
 
 ```swift
-import netly
+import Netly
 import Foundation
 
 struct GetUsersEndpoint: Endpoint {
-    var baseURL: URL? = URL(string: "https://api.example.com")
-    var path: String = "/users"
+    var url: URL? = URL(string: "https://api.example.com/users")
     var method: HTTPMethod = .get
     var headers: [String : String]? = nil
     var parameters: [String : Any]? = nil
@@ -46,7 +45,7 @@ struct GetUsersEndpoint: Endpoint {
 Use the `Netly.shared` instance (or create your own) to perform the request.
 
 ```swift
-import netly
+import Netly
 
 struct User: Decodable {
     let id: Int
