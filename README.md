@@ -17,7 +17,7 @@ Add Netly to your `Package.swift` dependencies:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-username/netly.git", from: "1.0.0")
+    .package(url: "https://github.com/rishopbabu/netly.git", from: "1.0.0")
 ]
 ```
 
